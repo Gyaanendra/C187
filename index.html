@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+  <title>Marker based AR Portfolio</title>
+
+  <!-- Import A-Frame and then AR.js -->
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+  
+</head>
+
+<body style="margin : 0px; overflow: hidden;">
+
+  <!-- A-frame scene -->
+ <a-scene vr-mode-ui="enabled:false" embedded arjs="sourceType:webcam;sourceWidth:1280;sourceHeight:960;displayWidth:1280;displayHeight:960 ;debugUIEnabled:false">
+  
+<a-assets>
+  <img src="./marker/marker-icon-01.png"  id="m1">
+  <img src="./marker/marker-icon-02.png"  id="m2">
+  <img src="./marker/marker-icon-03.png"  id="m3">
+  <img src="./marker/marker-icon-04.png"  id="m4">
+  <img src="./marker/marker-icon-05.png"  id="m5">
+  <img src="./marker/marker-icon-06.png"  id="m6">
+</a-assets>
+
+  <a-marker id="pm1" type="pattern" url="./marker/pattern-icon-01.patt">
+    <a-plane position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" src="#m1" ></a-plane>
+  </a-marker>
+  <a-marker id="pm2" type="pattern" url="./marker/pattern-icon-02.patt">
+    <a-plane position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" src="#m2"></a-plane>
+  </a-marker>
+  <a-marker id="pm3" type="pattern" url="./marker/pattern-icon-03.patt">
+    <a-plane position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" src="#m3"></a-plane>
+  </a-marker>
+  <a-marker id="pm4" type="pattern" url="./marker/pattern-icon-04.patt">
+    <a-plane position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" src="#m4"></a-plane>
+  </a-marker>
+  <a-marker id="pm5" type="pattern" url="./marker/pattern-icon-05.patt">
+    <a-plane position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" src="#m5"></a-plane>
+  </a-marker>
+  <a-marker id="pm6" type="pattern" url="./marker/pattern-icon-06.patt">
+    <a-plane position="0 0 -1" width="2" height="1.5" rotation="-90 0 0" src="#m6"></a-plane>   
+  </a-marker>
+
+ </a-scene>
+
+ 
+</body>
+
+</html>
